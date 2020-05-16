@@ -38,7 +38,6 @@ class create_date:
         return get_password
 
     def creat_college():
-        college = []
 		BussinessMajor = []
 		EngineeringMajor = []
 		InformationMajor = []
@@ -47,7 +46,6 @@ class create_date:
         return college_name
 
     def creat_department():
-		department = []
 		BusinessCollege = []
 		EngineeringCollege = []
 		InformationCollege = []
