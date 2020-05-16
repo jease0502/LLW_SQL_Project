@@ -57,7 +57,7 @@ class create_date:
         return class_name
 
     def creat_grade():
-        grade = ['1','2','3','4']
+        grade = ['一','二','三','四']
         grade_name = random.choice(grade)
         return grade_name
 
