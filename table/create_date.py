@@ -47,10 +47,10 @@ class create_date:
         return college_name
 
     def creat_department():
-		BusinessCollege = []
-		EngineeringCollege = []
-		InformationCollege = []
-		ConstructionCollege = []
+		BusinessCollege = ['商學院']
+		EngineeringCollege = ['工程與科學學院']
+		InformationCollege = ['資電學院']
+		ConstructionCollege = ['建設學院']
         department_name = random.choice(department)
         return department_name
 
