@@ -1,7 +1,7 @@
 import random
 class create_date:
-    
-    def big5_tw():
+
+    def big5_tw(self):
         # big5第一個字節
         first = random.randint(0xA4, 0xC6)
         # big5第二個字節
@@ -14,7 +14,7 @@ class create_date:
         # 返回
         return tw
 
-    def creat_name():
+    def creat_name(self):
         FIRST_NAME = ['陳', '林', '黃', '張', '李', '王', '吳', '劉', '蔡', '楊', '許','鄭',
     '謝', '郭', '洪', '曾', '邱', '廖', '賴', '周', '徐', '蘇', '葉', '莊', '呂','江',
      '何', '蕭', '羅', '高簡', '朱', '鍾', '施', '游', '詹', '沈', '彭', '胡', '余','盧',
@@ -29,7 +29,7 @@ class create_date:
         name = (first + name1 + name2)
         return name
 
-    def creat_password():
+    def creat_password(self):
         seed = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_ =-"
         password = []
         for i in range(8):
@@ -37,32 +37,32 @@ class create_date:
             get_password = ''.join(password)
         return get_password
 
-    def creat_college():
+    def creat_college(self):
         college = []
         college_name = random.choice(college)
         return college_name
 
-    def creat_department():
+    def creat_department(self):
         department = []
         department_name = random.choice(department)
         return department_name
 
-    def creat_class():
+    def creat_class(self):
         class_list = []
         class_name = random.choice(class_list)
         return class_name
 
-    def creat_grade():
+    def creat_grade(self):
         grade = []
         grade_name = random.choice(grade)
         return grade_name
 
-    def create_gender():
+    def create_gender(self):
         gender = ['男','女']
         gender_name = random.choice(gender)
         return grade_name
 
-    def create_email():
+    def create_email(self):
         emailtype = ["@gmail.com", "@yahoo.com.tw", "@mail.fcu.edu.tw", "@o365.fcu.edu.tw"]
         randomEmail = random.choice(emailtype)
         rang = random.randint(4, 10)

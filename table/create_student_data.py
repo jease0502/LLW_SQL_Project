@@ -14,8 +14,8 @@ class create_student_data(create_date):
         self.Gender = create_date.create_gender()
         self.Credit = create_date
 
-    def create_student_id():
+    def create_student_id(self):
         print("Creating student")
 
-    def create_credit():
+    def create_credit(self):
         print("Creating credit")
