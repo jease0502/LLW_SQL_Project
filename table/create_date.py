@@ -44,9 +44,9 @@ class create_date:
 
     def creat_department():
 		department = []
-		businessCollege = []
-		engineeringCollege = []
-		informationCollege = []
+		BusinessCollege = []
+		EngineeringCollege = []
+		InformationCollege = []
 		ConstructionCollege = []
         department_name = random.choice(department)
         return department_name
