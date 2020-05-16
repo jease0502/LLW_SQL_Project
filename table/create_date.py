@@ -38,10 +38,11 @@ class create_date:
         return get_password
 
     def creat_college():
-		BussinessMajor = []
-		EngineeringMajor = []
-		InformationMajor = []
-		ConstructionMajor = []
+		BussinessMajor = ['會計學系','國際經營與貿易學系',' 國際經營與貿易學系國際企業管理全英語學士班','財稅學系','合作經濟暨社會事業經營學系',
+		'統計學系','經濟學系','企業管理學系','行銷學系','商學學士學位學程' ]
+		EngineeringMajor = ['機械與電腦輔助工程學系','纖維與複合材料學系','工業工程與系統管理學系','化學工程學系','航太與系統工程學系','精密系統設計學士學位學程','應用數學系','環境工程與科學學系','材料科學與工程學系','光電科學與工程學系']
+		InformationMajor = ['資訊工程學系','電機工程學系','電子工程學系','自動控制工程學系','通訊工程學系','資訊電機學院學士班']
+		ConstructionMajor = ['土木工程學系','水利工程與資源保育學系','都市計畫與空間資訊學系','運輸與物流學系','土地管理學系']
         college_name = random.choice(college)
         return college_name
 
