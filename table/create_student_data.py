@@ -1,3 +1,4 @@
+import random
 from create_date import create_date
 
 class create_student_data(create_date):
@@ -12,10 +13,14 @@ class create_student_data(create_date):
         self.Email = create_date.create_email()
         self.Password = create_date.creat_password()
         self.Gender = create_date.create_gender()
-        self.Credit = create_date
+        self.Credit = 0
 
     def create_student_id(self):
-        print("Creating student")
-
-    def create_credit(self):
-        print("Creating credit")
+        id_head_limit = ["M","D","E"]
+        id_head = random.choice(id_head_limit)
+        id_middle_limit = ["08","07","06","05","04","03"]
+        id_middle = random.choice(id_middle_limit)
+        Number = "0123456789"
+        randomNumber = "".join(random.choice(Number) for i in range(5))
+        student_id = id_head + id_middle + randomNumber
+        return student_id
