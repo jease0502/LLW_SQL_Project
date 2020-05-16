@@ -39,6 +39,10 @@ class create_date:
 
     def creat_college():
         college = []
+		BussinessMajor = []
+		EngineeringMajor = []
+		InformationMajor = []
+		ConstructionMajor = []
         college_name = random.choice(college)
         return college_name
 
