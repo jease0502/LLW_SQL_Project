@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 #coding=utf-8
 import random
-import create_date
+import table.create_date as create_date
 
-class create_student_data(create_date.create_date):
+class create_student_data():
 
     def __init__(self):
         self.Student_id = self.create_student_id()
@@ -23,5 +23,5 @@ class create_student_data(create_date.create_date):
         id_middle = random.choice(id_middle_limit)
         Number = "0123456789"
         randomNumber = "".join(random.choice(Number) for i in range(5))
-        student_id = id_head + id_middle + randomNumber
+        student_id = (id_head + id_middle + randomNumber)
         return student_id
