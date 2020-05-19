@@ -1,18 +1,19 @@
+#!/usr/bin/env python
+#coding=utf-8
 import random
-from create_date import create_date
+import create_date
 
-class create_student_data(create_date):
+class create_student_data(create_date.create_date):
 
-    def __init__(self, name):
-        self.College = create_date.creat_college()
-        self.Student_id = create_student_id()
-        self.Department = create_date.creat_department()
-        self.Class = create_date.creat_class()
-        self.Grade = create_date.creat_grade()
-        self.Name = create_date.creat_name()
-        self.Email = create_date.create_email()
-        self.Password = create_date.creat_password()
-        self.Gender = create_date.create_gender()
+    def __init__(self):
+        self.Student_id = self.create_student_id()
+        self.Department , self.College = create_date.create_date().creat_college_and_creat_department()
+        self.Class = create_date.create_date().creat_class()
+        self.Grade = create_date.create_date().creat_grade()
+        self.Name = create_date.create_date().creat_name()
+        self.Email = create_date.create_date().create_email()
+        self.Password = create_date.create_date().creat_password()
+        self.Gender = create_date.create_date().create_gender()
         self.Credit = 0
 
     def create_student_id(self):

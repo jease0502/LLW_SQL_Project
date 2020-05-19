@@ -1,3 +1,4 @@
-from table.create_student import create_date
+#!/usr/bin/env python
+#coding=utf-8
 
-stu = new create_date()
+cat = create_student_id()
