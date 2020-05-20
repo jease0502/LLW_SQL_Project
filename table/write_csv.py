@@ -5,16 +5,25 @@ class write_csv():
 
 	def __init__(self):
 		t = time.localtime()
-		t_result = time.strftime("%m%d%Y%H%M%S",t)
-		self.filename =  'date/' + t_result + ".csv"
+		self.t_result = time.strftime("%m%d%Y%H%M%S",t)
+		self.filename = None
 
 	def create_student_data_csv(self):
+		self.filename =  'student_date/' + self.t_result + ".csv"
 		path = self.filename
 		writefile = open(path,'w',newline = '')
 		csv_head = ["Student_id","College","Department","Class","Grade","Name","Email","Password","gender","Credit"]
 		writer = csv.writer(writefile).writerow(csv_head)
 
-	def write_student_data_csv(self,date):
+	def create_teacher_data_csv(self):
+		self.filename =  'teacher_date/' + self.t_result + ".csv"
+		path = self.filename
+		writefile = open(path,'w',newline = '')
+		csv_head = ["Teacher_id","Name","Password","College","Department","Class","Status"]
+		writer = csv.writer(writefile).writerow(csv_head)
+
+
+	def write_data_csv(self,date):
 		path  = self.filename
 		writefile = open(path,'a',newline = '')
 		writer = csv.writer(writefile).writerow(date)
