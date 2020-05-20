@@ -12,7 +12,8 @@ class create_student_data():
         self.Grade = create_date.create_date().creat_grade()
         self.Name = create_date.create_date().creat_name()
         self.Email = create_date.create_date().create_email()
-        self.Password = create_date.create_date().creat_password()
+        #self.Password = create_date.create_date().creat_password()
+        self.Password = 0
         self.Gender = create_date.create_date().create_gender()
         self.Credit = 0
 
