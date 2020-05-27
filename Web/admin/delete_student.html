@@ -1,0 +1,25 @@
+<?php
+
+	require_once("conect.php");
+	$db = new PDO('mysql:host=localhost;dbname=class_database',$connect_un,$connect_pw);
+
+>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Teacher data</title>
+</head>
+<body>
+	<h1>刪除學生資料</h1>
+	<form>
+		<select name="查詢項目">
+		　<option value="id">學生id</option>
+		　<option value="name">姓名</option>
+		</select>
+		<input type="text" id="sth">
+	</form>
+	<td>
+	<button>確定刪除</button>
+</body>
+</html>
