@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Delete Teacher data</title>
@@ -11,7 +11,7 @@
 		　<option value="id">教師id</option>
 		　<option value="name">姓名</option>
 		</select>
-		<input type="text" id="sth">
+		<input type="text" name="sth">
 	</form>
 	<button>確定刪除</button>
 </body>
