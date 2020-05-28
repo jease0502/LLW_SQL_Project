@@ -12,45 +12,43 @@
 		<input type="submit" name="submit" value="上傳檔案" />
 	</form>
 	<form action="add_student_data.php" method="post" >
-		<table border="2">
-		  <tr>
-		    <th>請輸入學生id</th>
-		    <th><input type="text" name="Student_id" onblur="this.value=removeSpaces(this.value);"></th>
-		  </tr>
-		  <tr>
+		  <p>
+		    <th>請輸入學號</th>
+		    <th><input type="text" name="Student_id" value="NULL"></th>
+		  </p>
+		  <p>
 		    <td>請輸入學院</td>
-		    <td><input type="text" name="College" onblur="this.value=removeSpaces(this.value);"></td>
-		  </tr>
-		  <tr>
+		    <td><input type="text" name="College" value="NULL"></td>
+		  </p>
+		  <p>
 		  	<td>請輸入系級</td>
-		  	<td><input type="text"name="Department" onblur="this.value=removeSpaces(this.value);"></td>
-		  </tr>
-		  <tr>
+		  	<td><input type="text"name="Department"></td>
+		  </p>
+		  <p>
 		  	<td>請輸入年級</td>
-		  	<td><input type="text"name="Class" onblur="this.value=removeSpaces(this.value);"></td>
-		  </tr>
-		  <tr>
+		  	<td><input type="text"name="Class"></td>
+		  </p>
+		  <p>
 		  	<td>請輸入班級</td>
-		  	<td><input type="text"name="Grade" onblur="this.value=removeSpaces(this.value);"></td>
-		  </tr>
-		  <tr>
+		  	<td><input type="text"name="Grade"></td>
+		  </p>
+		  <p>
 		  	<td>請輸入姓名</td>
-		  	<td><input type="text"name="Name" onblur="this.value=removeSpaces(this.value);"></td>
-		  </tr>
-		  <tr>
+		  	<td><input type="text"name="Name"></td>
+		  </p>
+		  <p>
 		  	<td>請輸入信箱</td>
-		  	<td><input type="text"name="Email" onblur="this.value=removeSpaces(this.value);"></td>
-		  </tr>
-		  <tr>
+		  	<td><input type="text" name="Email" ></td>
+		  </p>
+		  <p>
 		  	<td>請輸入密碼</td>
-		  	<td><input type="text"name="Password" onblur="this.value=removeSpaces(this.value);"></td>
-		  </tr>
-		  <tr>
+		  	<td><input type="text"name="Password"></td>
+		  </p>
+		  <p>
 		  	<td>請輸入性別</td>
-		  	<td><input type="text"name="gender" onblur="this.value=removeSpaces(this.value);"></td>
-		  </tr>
-		</table>	
+		  	<td><input type="text"name="gender"></td>
+		  </p>
 		<input type="submit" name="value" value="提交" />
 	</form>
 </body>
-</html>	
+</html>
