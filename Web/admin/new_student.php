@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>New teacher</title>
+	<title>新增學生資料</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
@@ -14,11 +14,11 @@
 	<form action="add_student_data.php" method="post" >
 		  <p>
 		    <th>請輸入學號</th>
-		    <th><input type="text" name="Student_id" value="NULL"></th>
+		    <th><input type="text" name="Student_id" ></th>
 		  </p>
 		  <p>
 		    <td>請輸入學院</td>
-		    <td><input type="text" name="College" value="NULL"></td>
+		    <td><input type="text" name="College"></td>
 		  </p>
 		  <p>
 		  	<td>請輸入系級</td>
@@ -49,6 +49,7 @@
 		  	<td><input type="text"name="gender"></td>
 		  </p>
 		<input type="submit" name="value" value="提交" />
+		<input type="reset" name="value" value="清除" />
 	</form>
 </body>
 </html>

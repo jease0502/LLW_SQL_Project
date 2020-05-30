@@ -27,13 +27,7 @@
 		$db = new PDO('mysql:host=localhost;dbname=class_database',$connect_un,$connect_pw);
 		$q= "INSERT INTO student (Student_id,College,Department,Class,Grade,Name,Email,Password,gender) VALUES ('$Student_id','$College','$Department','$Grade','$Class','$Name','$Email','$Password','$gender');";
 		$result = $db->exec($q);
-		print<<<_END
-			<script>
-				alert("插入完成");
-				alert("$Student_id");
-			</script>
-		_END;
-		echo "<script>history.go(-1)</script>";
+		echo "<script>alert('填寫成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	}
 	else
 	{

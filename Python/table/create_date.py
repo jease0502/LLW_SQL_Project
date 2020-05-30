@@ -58,7 +58,7 @@ class create_date:
         grade = ['一','二','三','四']
         grade_name = random.choice(grade)
         return grade_name
-
+        
     def create_gender(self):
         gender = ['男','女']
         gender_name = random.choice(gender)

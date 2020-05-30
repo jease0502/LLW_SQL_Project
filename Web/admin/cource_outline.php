@@ -9,7 +9,7 @@
 	<p>
 		<table cellspacing="0" cell>
 			<td>開課學期 : </td>
-			<td></td>
+			<td>課程名稱 :</td>
 		</table>
 	</p>
 </body>
