@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 	<head>
 		<title>Admin</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">

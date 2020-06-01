@@ -1,7 +1,6 @@
 <?php
 	require_once("conect.php");
-	//echo $_POST['Teacher_id'] . "</br>" . $_POST['College'] . "</br>" . $_POST['Department'] . "</br>" . $_POST['Class'] . "</br>" 	. $_POST['Name'] . "</br>" . $_POST['Email'] . "</br>". $_POST['Password']. "</br>" . $_POST['Level'] ;
-	
+
 	if(isset($_POST['Teacher_id']) && isset($_POST['College'])  && isset($_POST['Department'])  && isset($_POST['Class']) && isset($_POST['Name']) && isset($_POST['Email']) && isset($_POST['Password']) && isset($_POST['Level']))
 	{
 		$Teacher_id = $_POST['Teacher_id'];

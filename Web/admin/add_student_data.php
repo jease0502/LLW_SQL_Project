@@ -1,6 +1,5 @@
 <?php
 	require_once("conect.php");
-	//echo $_POST['Student_id'] . "<br>" . $_POST['College'] . "</br>" . $_POST['Department'] . "</br>" . $_POST['Class'] . "</br>"  . $_POST['Grade'] . "</br>"  . $_POST['Name'] . "</br>" . $_POST['Email'] . "</br>". $_POST['Password']. "</br>" . $_POST['gender'] ;
 	if((($_POST['Student_id']) && ($_POST['College']) && ($_POST['Department']) && ($_POST['Class']) && ($_POST['Grade']) && ($_POST['Name']) && ($_POST['Email']) && ($_POST['Password']) && ($_POST['gender'])) == '')
 	{
 		print<<<_END

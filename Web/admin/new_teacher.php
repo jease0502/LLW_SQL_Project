@@ -45,7 +45,7 @@
 		  </select>
 		</p>
 		<p>
-		  <tr>
+		 <tr>
 		  	<td>請輸入系級</td>
 		 </tr>
 			<select name="Department" >
