@@ -3,9 +3,13 @@
 	<head>
 		<title>Admin</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>     
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
 		pre
 		{
 		    overflow-x: auto;
@@ -21,23 +25,11 @@
 	</head>
 	<body>
 		<h1>管理者介面</h1>
-	</body>
-</html>
 
-<html><div class="container">
 <?php
-	print<<<_END
-		<p>
-			<h3>功能清單</h3>
-		</p>
-		<p>
-			<input type="button" value="新增教師名單" onclick="location.href='new_teacher.php'">
-			<input type="button" value="新增學生名單" onclick="location.href='new_student.php'">
-			<input type="button" value="刪除教師名單" onclick="location.href='delete_teacher.php'">
-			<input type="button" value="刪除學生名單" onclick="location.href='delete_student.php'">
-		</p>
-		_END;
-
+	include "admin_nav.php";
+	nav_in();
+	print "<div class=\"container\">";
 	$data = "";
 	$data .= '
 	<div class="card my-2">
@@ -247,4 +239,5 @@
 	$data1 .= '  </div>';
 	echo $data1;
 ?>
-</div></html>
+</body>
+</html>
