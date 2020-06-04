@@ -77,7 +77,7 @@ function nav_noin(){
 function nav_judge() {
 	if (isset($_SESSION['account']) and isset($_SESSION['pwd'])) {
 		$account = $_SESSION['account'];
-		print <<<_END
+		print <<<END
 		<nav class="navbar navbar-light navbar-static-top">
 				<div class="container">
 				<div class="navbar-header">
@@ -114,9 +114,9 @@ function nav_judge() {
 				</div>
 			</div>
 		</nav>
-		_END;
+		END;
 	} else {
-		print <<<_END
+		print <<<END
 			<nav class="navbar navbar-light navbar-static-top">
 				<div class="container">
 				<div class="navbar-header">
@@ -142,7 +142,7 @@ function nav_judge() {
 				</div>
 			</div>
 		</nav>
-		_END;
+		END;
 	}
 }
 
