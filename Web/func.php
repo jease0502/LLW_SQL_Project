@@ -2,7 +2,7 @@
 function nav_in(){
 	if (isset($_SESSION['account']) and isset($_SESSION['pwd'])) {
 		$account = $_SESSION['account'];
-		print <<<_END
+		print <<<END
 		<header><h1> 歡迎 $account</h1><br></header>
 		<nav class="navbar navbar-light navbar-static-top">
 				<div class="container">
@@ -40,13 +40,13 @@ function nav_in(){
 				</div>
 			</div>
 		</nav>
-		_END;
+		END;
 	}else{
 		header("refresh:0;url=Home.php");
 	} 
 }
 function nav_noin(){
-	print <<<_END
+	print <<<END
 			<nav class="navbar navbar-light navbar-static-top">
 				<div class="container">
 				<div class="navbar-header">
@@ -72,7 +72,7 @@ function nav_noin(){
 				</div>
 			</div>
 		</nav>
-		_END;
+		END;
 }
 function nav_judge() {
 	if (isset($_SESSION['account']) and isset($_SESSION['pwd'])) {
