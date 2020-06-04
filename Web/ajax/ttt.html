@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1 align=center>選課系統</h1>
+    <script>
+        department = new Array();
+        department[0] = ["企管一甲", "企管一乙", "企管二甲", "企管二乙", "企管三甲", "企管三乙", "企管四甲", "企管四乙", "企管碩一", "企管碩二"]; //企管系
+        department[1] = ["通識－社會整合(SB)", "通識－社會", "通識－社會(夜)", "通識－人文", "通識－人文(夜)", "通識－自然", "通識－自然(夜)", "通識－統合", "通識－統合(夜)"];	//通識課
+        department[2] = ["資訊一甲", "資訊一乙", "資訊一丙", "資訊二甲", "資訊二乙", "資訊二丙", "資訊二丁", "資訊三甲", "資訊三乙", "資訊三丙", "資訊三丁", "資訊碩一", "資訊博一", "資訊博二", "電腦系統學程資訊三", "軟體工程學程資訊三", "網路與資安學程資訊三", "資訊跨域學程資訊三"];	//資訊系
+        function renew(index) {
+            for (var i = 0; i < department[index].length; i++)
+                document.myForm.member.options[i] = new Option(department[index][i], department[index][i]);	// 設定新選項
+            document.myForm.member.length = department[index].length;	// 刪除多餘的選項
+        }
+    </script>
+    <!-- <section>
+    <h2>Contact information</h2>
+    <fieldset>
+      <legend>Title</legend>
+      <ul>
+          <li>
+            <label for="title_1">
+              <input type="radio" id="title_1" name="title" value="K" >
+              King
+            </label>
+          </li>
+          <li>
+            <label for="title_2">
+              <input type="radio" id="title_2" name="title" value="Q">
+              Queen
+            </label>
+          </li>
+          <li> 
+            <label for="title_3"> 
+              <input type="radio" id="title_3" name="title" value="J">
+              Joker 
+            </label> 
+          </li>
+      </ul>
+    </fieldset>
+    <p>
+      <label for="name">
+        <span>Name: </span>
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+      <input type="text" id="name" name="username">
+    </p>
+    <p>
+      <label for="mail">
+        <span>E-mail: </span>
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+      <input type="email" id="mail" name="usermail">
+    </p>
+    <p>
+      <label for="pwd">
+        <span>Password: </span>
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+      <input type="password" id="pwd" name="password">
+    </p>
+</section> -->
+    <form name="myForm" action=".php" method="post">
+        <fieldset>
+            <div>
+                <p>學院</p>
+            </div>
+        </fieldset>
+        <div>
+            <p>系別：</p>
+            <select name="department" onclick="renew(this.selectedIndex);">
+                <option value="企業管理系">企業管理系</option>
+                <option value="通識">通識</option>
+                <option value="資訊工程系">資訊工程系</option>
+            </select>
+        </div>
+        <div>
+            <p>班級：</p>
+            <select name="member">
+                <option value="">請由左方選取系別</option>
+            </select>
+        <input type="submit" value="Search">
+        </div>
+        
+    </form>
+</body>
+
+</html>

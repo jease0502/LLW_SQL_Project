@@ -12,4 +12,4 @@
 		<input type="button" value="教師資料編輯" onclick="location.href='teacher_contact.php'">
 	</tr>
 </table>
-</html>
+</html>''

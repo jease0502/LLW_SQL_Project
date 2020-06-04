@@ -15,11 +15,11 @@
 		$result = $db->exec($q);
 		echo "<script>alert('填寫成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	}else{
-		print<<<END
+		print<<<_END
 			<script>
 				alert("填寫錯誤");
 			</script>
-END;
+		_END;
 		echo "<script>history.go(-1)</script>";
 	}
 ?>
