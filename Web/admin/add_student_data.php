@@ -6,7 +6,7 @@
 			<script>
 				alert("填寫錯誤");
 			</script>
-		_END;
+_END;
 		echo "<script>history.go(-1)</script>";
 	} else {
 		if(isset($_POST['Student_id']) && isset($_POST['College']) && isset($_POST['Department']) && isset($_POST['Class']) && isset($_POST['Grade']) && isset($_POST['Name']) && isset($_POST['Email']) && isset($_POST['Password']) && isset($_POST['gender']))
