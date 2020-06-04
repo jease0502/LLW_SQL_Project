@@ -30,7 +30,7 @@
 
 <?php
 session_start();
-include "func.php";
+include("func.php")
 nav_judge();
 ?>
 

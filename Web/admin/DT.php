@@ -76,7 +76,6 @@
 			print "<input id=\"button_del\"  type=\"submit\" value=\"刪除\" onclick =\"post_sub(";
 			print $datalist['Teacher_id'];
 			print ")\">";
-                 
     }catch(PDOException $execption){
         echo "SQL Connection failed";
     }
