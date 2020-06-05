@@ -30,8 +30,8 @@
 							_END;
 						}else{
 							session_start();
-							$_SESSION['account'] = $account;
-							$_SESSION['pwd'] = $pwd;
+							$_SESSION[account] = $account;
+							$_SESSION[pwd] = $pwd;
 							header("refresh:0;url=welcome.php");
 						}
 						$db=null;
@@ -55,8 +55,8 @@
 				$row=$cusr->fetch(PDO::FETCH_BOTH);
 				if($pwd == $row['Password']){
 					session_start();
-					$_SESSION['A_account'] = $account;
-					$_SESSION['A_pwd'] = $pwd;
+					$_SESSION[A_account] = $account;
+					$_SESSION[A_pwd] = $pwd;
 					header("refresh:0;url=admin\admin.php");
 					$db=null;
 				}else{
