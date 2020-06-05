@@ -33,8 +33,6 @@
 							$_SESSION['account'] = $account;
 							$_SESSION['pwd'] = $pwd;
 							header("refresh:0;url=welcome.php");
-							$db=null;
-							exit;
 						}
 						$db=null;
 					}
