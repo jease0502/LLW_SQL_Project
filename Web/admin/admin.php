@@ -54,8 +54,6 @@
 	$services[] = array("port" => "8112",     "service" => "Deluge Web",             	"ip" => "") ;
 	$services[] = array("port" => "80",       "service" => "Internet Connection",     "ip" => "google.com") ;
 	$services[] = array("port" => "8083",     "service" => "Vesta panel",             	"ip" => "") ;
-
-
 	//begin table for status
 	$data .= "<small><table  class='table table-striped table-sm '><thead><tr><th>Service</th><th>Port</th><th>Status</th></tr></thead>";
 	foreach ($services  as $service) {
