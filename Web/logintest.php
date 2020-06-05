@@ -12,22 +12,19 @@
 					$row1=$cusr->fetch(PDO::FETCH_BOTH);
 					if(empty($row1[0])){
 						$db=null;
-						print<<<_END
+						print"
 						<script>
-						alert ("使用者不存在");
+						alert (\"使用者不存在\");
 						setTimeout(function(){window.location.href='login.php';},1000);
-						</script>
-						_END;
+						</script>";
 					}else {
 						$cpwd=$db->query("SELECT Password FROM student WHERE Student_id = '$account';");
 						$row2=$cpwd->fetch(PDO::FETCH_BOTH);
 						if(!password_verify( $pwd ,$row2[0])){
-							print<<<_END
-							<script>
-							alert ("使用者名稱或密碼錯誤");
+							print"<script>
+							alert (\"使用者名稱或密碼錯誤\");
 							setTimeout(function(){window.location.href='login.php';},1000);
-							</script>
-							_END;
+							</script>";
 						}else{
 							session_start();
 							$_SESSION[account] = $account;
@@ -60,21 +57,17 @@
 					header("refresh:0;url=admin\admin.php");
 					$db=null;
 				}else{
-				print<<<END
-					<script>
-					alert ("使用者名稱或密碼錯誤");
-					setTimeout(function(){window.location.href='login.php';},1000);
-					</script>
-				END;
+				print "<script>
+				alert (\"使用者名稱或密碼錯誤\");
+				setTimeout(function(){window.location.href='login.php';},1000);
+				</script>";
 				}
 			break;
 		}
 	}else{
-		print<<<END
-				<script>
-				alert ("輸入不正確請重新輸入");
+		print "<script>
+				alert (\"輸入不正確請重新輸入\");
 				setTimeout(function(){window.location.href='login.php';},1000);
-				</script>
-		END;
+				</script>";
 	}
 ?>
