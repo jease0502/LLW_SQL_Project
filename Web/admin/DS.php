@@ -51,26 +51,26 @@
                 $datalist = $query->fetch();
             }
 			print "<table><tbody>";
-			print "<tr><td>學生id</td><td>";
+			print "<tr><td>學號</td><td>";
 			print $datalist['Student_id'];
 			print "</td></tr>";
-			print "	<tr><td>名字</td><td>" ;
+			print "	<tr><td>名字 </td><td>" ;
 			print $datalist['Name'] ;
 			print "</td></tr>";
-			print "	<tr><td>學院</td><td>";
+			print "	<tr><td>學院 </td><td>";
 			print $datalist['College'];
 			print "</td></tr>";
-			print "	<tr><td>系級</td><td>";
+			print "	<tr><td>系級 </td><td>";
 			print $datalist['Department'] ;
 			print "</td></tr>";
-			print "	<tr><td>班級</td><td>";
+			print "	<tr><td>年級 </td><td>";
+			print $datalist['Grade'] ;
+			print "</td></tr>";
+			print "	<tr><td>班級 </td><td>";
 			print $datalist['Class'];
 			print "</td></tr>";
-			print "	<tr><td>信箱</td><td>";
+			print "	<tr><td>信箱 </td><td>";
 			print $datalist['Email'];
-			print "</td></tr>";
-			print "	<tr><td>職別</td><td>";
-			print $datalist['Level'];
 			print "</td></tr>";
             print "</tbody></table>";
 			print "<input id=\"button_del\"  type=\"submit\" value=\"刪除\" onclick =\"post_sub(";
@@ -84,7 +84,7 @@
     <form name="myForm" action="add_teacher_data.php" method="post" >
 		<p>
 		  <tr>
-		    <th>請輸入學生</th>
+		    <th>請輸入學號</th>
 		    <th><input type="text" name="Student_id"></th>
 		  </tr>
 		</p>

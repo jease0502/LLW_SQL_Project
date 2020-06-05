@@ -34,7 +34,7 @@ include"func.php";
 nav_judge();
 ?>
 
-<div align="center" style="width: 90%;margin:5%;">	
+<div align="center" style="width: 90%;margin:5%;">
 <div align="center" id="accordion">
 	<H1>選課公告</H1>
 	<div>

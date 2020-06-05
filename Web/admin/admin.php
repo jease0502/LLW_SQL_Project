@@ -185,23 +185,13 @@
 
 	isset($free_mem[1])?$free_mem=$free_mem[1] + $cache_mem[1]:$free_mem=null;
 
-	//$free_mem = $free_mem[1] + $cache_mem[1];
 
 
-	//Get top mem usage
 	$tom_mem_arr = array();
 	$top_cpu_use = array();
 
-	//-- The number of processes to display in Top RAM user
 	$i = 5;
 
-
-	/* ps command:
-	-e to display process from all user
-	-k to specify sorting order: - is desc order follow by column name
-	-o to specify output format, it's a list of column name. = suppress the display of column name
-	head to get only the first few lines 
-	*/
 	exec("ps -e k-rss -o rss,args | head -n $i", $tom_mem_arr, $status);
 	exec("ps -e k-pcpu -o pcpu,args | head -n $i", $top_cpu_use, $status);
 

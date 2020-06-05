@@ -1,7 +1,7 @@
 <?php
     require_once("conect.php");
     if(isset($_POST['S_id'])){
-        $Teacher_id = $_POST['S_id'];
+        $Student_id = $_POST['S_id'];
         try{
             $db = new PDO('mysql:host=localhost;dbname=class_database',$connect_un,$connect_pw);
             $sql_del = "DELETE FROM student WHERE Student_id = '$Student_id';";
