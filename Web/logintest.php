@@ -10,6 +10,11 @@
 					$db = new PDO('mysql:host=localhost;dbname=class_database',$connect_un,$connect_pw);
 					$cusr=$db->query("SELECT Student_id FROM student WHERE Student_id = '$account';");
 					$row1=$cusr->fetch(PDO::FETCH_BOTH);
+					print"
+						<script>
+						alert (\"$row1\");
+						</script>";
+					
 					if(empty($row1[0])){
 						$db=null;
 						print"
