@@ -26,10 +26,10 @@ function nav_in(){
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="logout.php">登出</a>
-				</li>	
-			</ul>	
+				</li>
+			</ul>
 		</div>
 	</nav>
-	_END;
+_END;
 }
 ?>
