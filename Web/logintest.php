@@ -33,9 +33,25 @@
 			case 'T':
 				try{
 					$db = new PDO('mysql:host=localhost;dbname=class_database',$connect_un,$connect_pw);
-					$cusr=$db->query("SELECT Password FROM admin WHERE Admin_id = '$account';");
+					$cusr=$db->query("SELECT Password FROM teacher WHERE Teacher_id = '$account';");
 					$row=$cusr->fetch(PDO::FETCH_BOTH);
-				}catch (PODException $e){
+					if(empty($row1[0])){
+						$db=null;
+						alert("使用者不存在");
+					}else {
+						$cpwd=$db->query("SELECT Password FROM teacher WHERE Teacher_id = '$account';");
+						$row2=$cpwd->fetch(PDO::FETCH_BOTH);
+						if(!password_verify( $pwd ,$row2[0])){
+							alert("使用者名稱或密碼錯誤");
+						}else{
+							session_start();
+							$_SESSION['T_account'] = $account;
+							$_SESSION['T_pwd'] = $pwd;
+							header("refresh:0;url=teacher\teacher_home.php");
+						}
+						$db=null;
+					}
+				}catch (PODExceptsion $e){
 					print "couldn't to connect to db " . $e->getMessage();
 				}
 			break;
