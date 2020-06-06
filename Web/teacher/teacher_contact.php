@@ -14,32 +14,21 @@
 
 
 <body>
-	<h1>教師資料修改</H1>
+	<h1>教師資料修改</h1>
 
 <?php
-
-	require_once("conect.php");
-    try{
+	session_start();
+    try
+    {
         $db = new PDO('mysql:host=localhost;dbname=class_database',$connect_un,$connect_pw);
-            if (($_POST['search_item'] == "id") && isset($_POST['Teacher_id'])) {
-                $T_id = $_POST['Teacher_id'];
+            if ((isset($_SESSION['T_account'])))
+             {
+                $T_id = $_SESSION['T_account'];
                 $sql_q= "SELECT * FROM teacher WHERE Teacher_id = '$T_id'; ";
                 $query = $db->query($sql_q);
                 $datalist = $query->fetch();
-                if(!(isset($datalist['Teacher_id']))||($datalist['Teacher_id'])==Null){
-                	print<<<_END
-						<script>
-							alert("沒有資料");
-							history.go(-1);
-						</script>
-					_END;
-                }
-            }else if(($_POST['search_item'] == "name") && isset($_POST['Teacher_id'])){
-                $Name = $_POST['Teacher_id'];
-                $sql_q= "SELECT * FROM teacher WHERE Name= '$Name';";
-                $query = $db->query($sql_q);
-                $datalist = $query->fetch();
-                if(!(isset($datalist['Teacher_id']))||($datalist['Teacher_id'])==Null){
+                if(!(isset($datalist['Teacher_id']))||($datalist['Teacher_id'])==Null)
+                {
                 	print<<<_END
 						<script>
 							alert("沒有資料");
@@ -72,7 +61,9 @@
 			print "</td></tr>";
             print "</tbody></table>";
 
-    }catch(PDOException $execption){
+    }
+    catch(PDOException $execption)
+    {
         echo "SQL Connection failed";
     }
 ?>
@@ -115,3 +106,4 @@
 		<input type="reset" name="value" />
 		<input type ="button" onclick="history.back()" value="回到上一頁">
 	</form>
+</body>
