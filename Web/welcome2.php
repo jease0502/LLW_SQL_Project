@@ -14,7 +14,8 @@
 			line-height: 24px;
     		letter-spacing: 3px;
 			line-height: 1.5em;
-			font-size:150%; 
+			font-size:150%;
+			margin:10%;
 		}
 		.button {
   		border: none;
@@ -93,12 +94,11 @@
 	})	
 	</script>
 	<div style="text-align:center;">
-		<form action="addclass.php" method="post" class="fromcss" >
+		<form action="addclass.php" method="post" class="fromcss" style="float: left;" >
 			<p>選課代號<br><input class ="inputcss" type="text" name="addchoose"></p>
 			<input type="submit" name="value">
 		</form>
-		<br>
-		<form name="subclass" action="subclass.php" method="post" class="fromcss" onclick="return false">
+		<form name="subclass" action="subclass.php" method="post" class="fromcss" style="float: right;" onclick="return false">
 			<p>退選代號<br><input class ="inputcss" type="text" name="subchoose"></p>
 			<input type="submit" name="button" id="button" value="送出" />
 		</form>
