@@ -11,6 +11,7 @@
                     alert("刪除成功");
                 </script>
             _END;
+            echo "<meta http-equiv='refresh' content='0;url=delete_teacher.php' />";
         }catch(PDOException $execption){
             echo "Connection failed" . $execption->getMessage();
         }

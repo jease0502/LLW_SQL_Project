@@ -12,9 +12,11 @@
 		$Email = $_POST['Email'];
 		$Password = $_POST['Password'];
 		$Level = $_POST['Level'];
-		$q= "INSERT INTO teacher (Teacher_id,College,Department,Class,Name,Email,Password,Level) VALUES ('$Teacher_id','$College','$Department','$Class','$Name','$Email','$Password','$Level');";
+		$q= "UPDATE  teacher SET College='$College',Department='$Department',Class='$Class',Name='$Name',Email='$Email',Password='$Password',Level='$Level' WHERE Teacher_id='$Teacher_id'";
+		echo "<script>alert($q);</script>";
 		$result = $db->exec($q);
-		echo "<script>alert('填寫成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+		echo "<script>alert('填寫成功!');</script>";
+		echo "<meta http-equiv='refresh' content='0;url=delete_teacher.php' />";
 	}
 	else
 	{

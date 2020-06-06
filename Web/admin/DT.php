@@ -21,6 +21,7 @@
 	<h1>教師資料</H1>
 	<script>
 	function post_sub(PARAMS) {
+				console.log(PARAMS);
     			var temp = document.createElement("form");
     			temp.action = "DTD.php";
     			temp.method = "post";
@@ -106,8 +107,9 @@
 			print "</td></tr>";
             print "</tbody></table>";
 			print "<input id=\"button_del\"  type=\"submit\" value=\"刪除\" onclick =\"post_sub(";
-			print $datalist['Teacher_id'];
+			print "'".$datalist['Teacher_id']."'";
 			print ")\">";
+
     }catch(PDOException $execption){
         echo "SQL Connection failed";
     }
@@ -127,11 +129,12 @@
 		}
 </script>
 <h1>修改資料</h1>
-    <form name="myForm" action="add_teacher_data.php" method="post" >
+    <form name="myForm" action="update_teacher_data.php" method="post" >
 		<p>
 		  <tr>
-		    <th>請輸入證號</th>
-		    <th><input type="text" name="Teacher_id"></th>
+		    <th>
+		    <h6>證號 <?php echo $datalist['Teacher_id'];?></h6></th>
+		    <td><input type="hidden"name="Teacher_id" value="<?php echo $datalist['Teacher_id'];?>"></td>
 		  </tr>
 		</p>
 		<p>
@@ -190,4 +193,5 @@
 		</p>
 		<input type="submit" name="value" value="提交" />
 		<input type="reset" name="value" />
+		<input type ="button" onclick="history.back()" value="回到上一頁">
 	</form>
