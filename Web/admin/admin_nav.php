@@ -14,6 +14,7 @@ function nav_in(){
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="new_teacher.php">新增教師</a>
 						<a class="dropdown-item" href="new_student.php">新增學生</a>
+						<a class="dropdown-item" href="new_teacher_course.php">新增課程</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
