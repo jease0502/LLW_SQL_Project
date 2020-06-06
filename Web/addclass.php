@@ -1,10 +1,4 @@
 <?php
-	function alert($alertstr){
-		print "<script>";
-		print "alert (\"";
-		print $alertstr;
-		print "\");</script>";
-	}
 	function check_sec($database, $cod, $ac){
 		$check_sql = "SELECT Code FROM class WHERE Person_id = '$ac' AND Code ='$cod';";
 		$do_it = $database->query($check_sql);

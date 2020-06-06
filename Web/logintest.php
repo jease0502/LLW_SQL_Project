@@ -13,23 +13,11 @@
 					if(empty($row1[0])){
 						$db=null;
 						alert("使用者不存在");
-						// print<<<_END
-						// <script>
-						// alert ("使用者不存在");
-						// setTimeout(function(){window.location.href='login.php';},1000);
-						// </script>
-						// _END;
 					}else {
 						$cpwd=$db->query("SELECT Password FROM student WHERE Student_id = '$account';");
 						$row2=$cpwd->fetch(PDO::FETCH_BOTH);
 						if(!password_verify( $pwd ,$row2[0])){
 							alert("使用者名稱或密碼錯誤");
-							print<<<_END
-							<script>
-							alert ("使用者名稱或密碼錯誤");
-							setTimeout(function(){window.location.href='login.php';},1000);
-							</script>
-							_END;
 						}else{
 							session_start();
 							$_SESSION['account'] = $account;
@@ -63,22 +51,10 @@
 					$db=null;
 				}else{
 					alert("使用者名稱或密碼錯誤");
-				print<<<END
-					<script>
-					alert ("使用者名稱或密碼錯誤");
-					setTimeout(function(){window.location.href='login.php';},1000);
-					</script>
-				END;
 				}
 			break;
 		}
 	}else{
 		alert("輸入不正確請重新輸入");
-		print<<<END
-				<script>
-				alert ("輸入不正確請重新輸入");
-				setTimeout(function(){window.location.href='login.php';},1000);
-				</script>
-		END;
 	}
 ?>

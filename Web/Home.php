@@ -58,17 +58,6 @@ nav_judge();
 <div>
 <script>
 	$("#accordion").accordion();
-	// $("#dialog").dialog({
-    //   		autoOpen:true ,
-    //   	show: {
-    //     	effect: "puff",
-    //     	duration: 1000
-    // 	},
-    //   	hide: {
-    //     	effect: "slide",
-    //     	duration: 100
-    //   	}
-    // });
 	</script>
 </body>
 </html>
