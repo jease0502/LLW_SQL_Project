@@ -68,19 +68,6 @@
     }
 ?>
 
-
-<script>
-		department=new Array();
-		department[1]=["資訊系","自控系","通訊系","電機系","電子系","資電不分系"];	// 資電學院
-		department[2]=["國貿系", "會計系", "國貿系全英班", "商學院", "財稅系","合經系","統計系","經濟系","企管系","行銷系","商學學士學位學程"];	// 商學院
-		department[3]=["通識中心"];			//通識中心
-		function renew(index)
-		{
-			for(var i=0;i<department[index].length;i++)
-			document.myForm.Department.options[i]=new Option(department[index][i], department[index][i]);	// 設定新選項
-			document.myForm.Department.length=department[index].length;	// 刪除多餘的選項
-		}
-</script>
 <h1>修改資料</h1>
     <form name="myForm" action="update_teacher_data.php" method="post" >
 		<p>
