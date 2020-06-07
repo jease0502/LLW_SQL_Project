@@ -13,7 +13,45 @@
 
 </head>
 
+<?php
+
+// php select option value from database
+
+$hostname = "localhost";
+$username = "liu";
+$password = "iwanttologin";
+$databaseName = "class_database";
+
+// connect to mysql database
+
+$connect = mysqli_connect($hostname, $username, $password, $databaseName);
+
+// mysql select query
+$query = "SELECT class_detail.Code FROM class_detail INNER JOIN teacher ON teacher.Name = class_detail.Teacher_Name and teacher.Teacher_id = 'T01'";
+
+// for method 1
+
+$result1 = mysqli_query($connect, $query);
+
+
+?>
+
 <body>
 	<h1>教師課程內容編輯</h1>
+	<form name="myForm" action="course_view.php" method="post" >
+		<h5  align="center">請輸入課程代碼</h5>
+		<input  type="text" name="Code" />
+		<input  align="center" type="submit" name="value" value="提交" />
+		<select  name="Code">
+
+            <?php while($row1 = mysqli_fetch_array($result1)):;?>
+
+            <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
+
+            <?php endwhile;?>
+
+        </select>
+	</form>
+
 </body>
 </html>
