@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require_once("conect.php");
 	if ( isset($_POST['account']) && isset($_POST['password'])){
 		$account = $_POST['account'];
@@ -21,7 +22,6 @@
 							alert("使用者名稱或密碼錯誤");
 							header("refresh:0;url=login.php");
 						}else{
-							session_start();
 							$_SESSION['account'] = $account;
 							$_SESSION['pwd'] = $pwd;
 							header("refresh:0;url=welcome.php");
