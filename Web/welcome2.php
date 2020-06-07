@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +38,6 @@
 	<?php
 		include "func.php";
 		require_once("conect.php");
-		session_start();
 		nav_in();
 		$account = $_SESSION['account'];
 		$HELD = "SELECT class.Code,Day,Time,class_detail.Name FROM time JOIN class ON class.Code = time.Code JOIN class_detail ON class.Code = class_detail.Code WHERE Person_id = '$account' ORDER BY Time;";

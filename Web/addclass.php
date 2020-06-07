@@ -106,6 +106,12 @@
 	}
 	$db = null;
 	switch($_SERVER['HTTP_REFERER']){
+		case "http://140.134.38.148/welcome2.php":
+			header("refresh:0;url=welcome2.php");
+		break;
+		case "http://140.134.38.148/trypull.php":
+			header("refresh:0;url=trypull.php");
+		break;
 		case "http://127.0.0.1/database_W/trypull.php":
 			header("refresh:0;url=trypull.php");
 		break;

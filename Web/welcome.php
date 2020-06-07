@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +35,6 @@
 	<?php
 		include "func.php";
 		require_once("conect.php");
-		session_start();
 		nav_in();
 		$account = $_SESSION['account'];
 		$ALLHELD = "SELECT Class,Name,class.Code,Credit,Haveto,College,Totalnum,Nownum,Teacher_Name FROM class_detail JOIN class ON class.Code = class_detail.Code WHERE Person_id = '$account';";
@@ -42,7 +44,7 @@
 		$credit_T = "SELECT Credit FROM student WHERE Student_id = '$account' ;";
 		$data_t = $db->query($credit_T);
 		$C_T_data = $data_t->fetch(PDO::FETCH_BOTH);
-		if(isset($rows)){
+		if(!empty($rows)){
 			print "<div style=\"text-align:center;\"><H3> 已選課表 </H3></div><br> ";
 			print " <table style=\"width:80%;\" border=\"1\" align=\"center\">";
 			print "<thead><tr style=\"height:40px\"> <th><div style=\"text-align:center;\">開課班級</div></th> <th><div style=\"text-align:center;\">課程名稱</div></th> <th><div style=\"text-align:center;\">選課代號</div></th><th><div style=\"text-align:center;\">學分數</div></th> <th><div style=\"text-align:center;\">必選修</div></th><th><div style=\"text-align:center;\">開課單位</div></th> <th><div style=\"text-align:center;\">收授人數</div></th> <th><div style=\"text-align:center;\">開課人數</div></th> <th><div style=\"text-align:center;\">授課教師</div></th> </tr></thead><tbody>" ;
