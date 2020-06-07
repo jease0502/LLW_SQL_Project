@@ -10,6 +10,53 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist\css\bootstrap.min.css">
 	<script src="bootstrap-3.3.7-dist\js/bootstrap.min.js"></script>
+	<Style>
+		#topContent {
+			background-image: url('./Images/login_banner.jpg');
+			background-repeat: no-repeat;
+			text-align: right;
+			background-color: #006699;
+			color: White;
+			font-size: x-large;
+			text-decoration: none;
+			font-weight: bold;
+			padding: 10px;
+			height: 75px;
+			min-width: 970px;	
+		}
+		
+		input[type=text], select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		#sub{
+			width: 100%;
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+	
+		#sub2{
+			width: 100%;
+			background-color: #E8FFE8;
+			color: black;
+			padding: 8px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}		
+	</style>
 </head>
 <body>
 	<?php
@@ -28,7 +75,9 @@
 			document.myForm.Department.length=department[index].length;	// 刪除多餘的選項
 		}
 	</script>
-	<p><h1>新增教師名單</h1></p>
+	<div id="topContent">
+		<p><h1>新增教師名單</h1></p>
+	</div>
 	<p><h4>一鍵匯入名單</h4></p>
 	<form  action="upload.php" method="post" enctype="multipart/form-data">檔案名稱:
 		<input type="file" name="file" id="file" /><br />
@@ -37,13 +86,13 @@
 		<form name="myForm" action="add_teacher_data.php" method="post" >
 		<p>
 		  <tr>
-		    <th>請輸入教師</th>
+		    <th><font size="5">請輸入教師</font></th>
 		    <th><input type="text" name="Teacher_id"></th>
 		  </tr>
 		</p>
 		<p>
 		  <tr>
-		    <td>請輸入學院</td>
+		    <td><font size="5">請輸入學院</font></td>
 		  </tr>
 		  <select name="College"  onChange="renew(this.selectedIndex);">
 		  	<option value="">請選擇</option>
@@ -54,7 +103,7 @@
 		</p>
 		<p>
 		 <tr>
-		  	<td>請輸入系級</td>
+		  	<td><font size="5">請輸入系級</font></td>
 		 </tr>
 			<select name="Department" >
 				<option value="">
@@ -62,31 +111,31 @@
 		</p>
 		<p>
 		  <tr>
-		  	<td>請輸入班級</td>
+		  	<td><font size="5">請輸入班級</font></td>
 		  	<td><input type="text"name="Class"></td>
 		  </tr>
 		</p>
 		<p>
 		  <tr>
-		  	<td>請輸入姓名</td>
+		  	<td><font size="5">請輸入姓名</font></td>
 		  	<td><input type="text"name="Name"></td>
 		  </tr>
 		</p>
 		<p>
 		  <tr>
-		  	<td>請輸入信箱</td>
+		  	<td><font size="5">請輸入信箱</font></td>
 		  	<td><input type="text"name="Email"></td>
 		  </tr>
 		</p>
 		<p>
 		  <tr>
-		  	<td>請輸入密碼</td>
+		  	<td><font size="5">請輸入密碼</font></td>
 		  	<td><input type="text"name="Password"></td>
 		  </tr>
 		</p>
 		<p>
 		  <tr>
-		  	<td>請輸入職稱</td>
+		  	<td><font size="5">請輸入職稱</font></td>
 		  </tr>
 		  <select name="Level">
 　			<option value="教授">教授</option>
@@ -95,8 +144,9 @@
 　			<option value="職員">職員</option>
 		  </select>
 		</p>
-		<input type="submit" name="value" value="提交" />
-		<input type="reset" name="value" />
+		<input type="submit" id="sub" name="value" value="提交" />
+		<input type="reset"  id="sub2" name="value" />
 	</form>
+
 </body>
 </html>
