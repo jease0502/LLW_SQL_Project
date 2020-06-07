@@ -79,7 +79,7 @@
 		<p><h1>新增教師名單</h1></p>
 	</div>
 	<p><h4>一鍵匯入名單</h4></p>
-	<form  action="upload.php" method="post" enctype="multipart/form-data">檔案名稱:
+	<form  action="upload_teacher.php" method="post" enctype="multipart/form-data">檔案名稱:
 		<input type="file" name="file" id="file" /><br />
 		<input type="submit" name="submit" value="上傳檔案" />
 	</form>

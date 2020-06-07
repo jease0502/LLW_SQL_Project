@@ -25,4 +25,4 @@ for i in range(100):
 	tea1 = crate_teacher_table()
 	dates = [tea1.Teacher_id,tea1.Name,tea1.Password,tea1.Department,tea1.College,tea1.Class,tea1.Status]
 	tea1_csv.write_data_csv(dates)
-tea1_csv.read_csv()
+#tea1_csv.read_csv()

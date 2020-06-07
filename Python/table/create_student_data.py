@@ -8,8 +8,8 @@ class create_student_data():
     def __init__(self):
         self.Student_id = self.create_student_id()
         self.Department , self.College = create_date.create_date().creat_college_and_creat_department()
-        self.Class = create_date.create_date().creat_class()
         self.Grade = create_date.create_date().creat_grade()
+        self.Class = self.Department + self.Grade + create_date.create_date().creat_class()
         self.Name = create_date.create_date().creat_name()
         self.Email = create_date.create_date().create_email()
         #self.Password = create_date.create_date().creat_password()
