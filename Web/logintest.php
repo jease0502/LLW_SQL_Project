@@ -7,7 +7,8 @@
 		$account_T = substr($account,0,1);
 		switch($account_T){
 			case 'D':
-				try{
+				try
+				{
 					$db = new PDO('mysql:host=localhost;dbname=class_database',$connect_un,$connect_pw);
 					$cusr=$db->query("SELECT Student_id FROM student WHERE Student_id = '$account';");
 					$row1=$cusr->fetch(PDO::FETCH_BOTH);
@@ -15,7 +16,7 @@
 						$db=null;
 						alert("使用者不存在");
 						header("refresh:0;url=login.php");
-					}else 
+					}else
 					{
 						$cpwd=$db->query("SELECT Password FROM student WHERE Student_id = '$account';");
 						$row2=$cpwd->fetch(PDO::FETCH_BOTH);
@@ -29,16 +30,21 @@
 						}
 						$db=null;
 					}
-				}catch (PODException $e){
+				}
+				catch (PODException $e)
+				{
 					print "couldn't to connect to db " . $e->getMessage();
 				}
 			break;
 			case 'T':
 				try{
 					$db = new PDO('mysql:host=localhost;dbname=class_database',$connect_un,$connect_pw);
-					$cusr=$db->query("SELECT Teacher_id FROM teacher WHERE Teacher_id = '$account';");
-					$row=$cusr->fetch(PDO::FETCH_BOTH);
-					if(empty($row1[0]))
+					alert($account);
+					$q = "SELECT Teacher_id FROM teacher WHERE Teacher_id = '$account';";
+					$query = $db->query($q);
+					$datalist = $query->fetch();
+					//alert($datalist);
+					if(empty($datalist[0]))
 					{
 						$db=null;
 						alert("使用者不存在");
@@ -48,7 +54,7 @@
 					{
 						$cpwd=$db->query("SELECT Password FROM teacher WHERE Teacher_id = '$account';");
 						$row2=$cpwd->fetch(PDO::FETCH_BOTH);
-						if(!password_verify( $pwd ,$row2[0])){
+						if(!( $pwd == $row2[0])){
 							alert("使用者名稱或密碼錯誤");
 							header("refresh:0;url=login.php");
 						}else{

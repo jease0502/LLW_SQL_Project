@@ -24,7 +24,6 @@ foreach ($datalist as $datainfo)
 	<h1>教師課程內容編輯</h1>
 	<form name="myForm" action="course_view.php" method="post" >
 		<h5 >請輸入課程代碼</h5>
-		<input  type="text" name="Code" />
 		<input  align="center" type="submit" name="value" value="提交" />
 		<select  name="Code">
             <?php
@@ -36,6 +35,6 @@ foreach ($datalist as $datainfo)
             ?>
         </select>
 	</form>
-
+<input type ="button" onclick="history.back()" value="回到上一頁">
 </body>
 </html>

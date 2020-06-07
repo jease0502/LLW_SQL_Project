@@ -3,11 +3,7 @@
 	$db = new PDO('mysql:host=localhost;dbname=class_database',$connect_un,$connect_pw);
 	if((($_POST['Class']) && ($_POST['Name']) && ($_POST['Code']) && ($_POST['Credit']) && ($_POST['Haveto']) && ($_POST['College']) && ($_POST['Totalnum']) && ($_POST['Teacher_Name'])) == '')
 	{
-		print<<<_END
-			<script>
-				alert("填寫錯誤");
-			</script>
-		_END;
+		print"<script>alert("填寫錯誤");</script>";
 		echo "<script>history.go(-1)</script>";
 	}
 	else

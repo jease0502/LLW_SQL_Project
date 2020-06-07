@@ -63,5 +63,6 @@
     }
 ?>
 
+<input type ="button" onclick="history.back()" value="回到上一頁">
 
 </body>

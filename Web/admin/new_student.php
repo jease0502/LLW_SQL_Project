@@ -112,11 +112,11 @@
 		  </p>
 		  <p>
 		  	<td><font size="5">請輸入年級</font></td>
-		  	<td><input type="text"name="Class"></td>
+		  	<td><input type="text"name="Grade"></td>
 		  </p>
 		  <p>
 		  	<td><font size="5">請輸入班級</font></td>
-		  	<td><input type="text"name="Grade"></td>
+		  	<td><input type="text"name="Class"></td>
 		  </p>
 		  <p>
 		  	<td><font size="5">請輸入姓名</font></td>
