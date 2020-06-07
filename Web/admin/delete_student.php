@@ -11,13 +11,30 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist\css\bootstrap.min.css">
 	<script src="bootstrap-3.3.7-dist\js/bootstrap.min.js"></script>
+	<style>
+		#topContent {
+			background-image: url('./Images/login_banner.jpg');
+			background-repeat: no-repeat;
+			text-align: right;
+			background-color: #006699;
+			color: White;
+			font-size: x-large;
+			text-decoration: none;
+			font-weight: bold;
+			padding: 10px;
+			height: 75px;
+			min-width: 970px;	
+		}	
+	</style>	
 </head>
 <body>
 	<?php
 	    include "admin_nav.php";
         nav_in();
     ?>
-	<h1>修改學生資料</h1>
+	<div id="topContent">
+		<h1>修改學生資料</h1>
+	</div>
 	<form action="DS.php" method="post" >
 		<select name="search_item">
 		　<option value="id">學生id</option>
