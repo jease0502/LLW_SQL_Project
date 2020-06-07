@@ -31,7 +31,13 @@
 	nav_in();
 	print "<div class=\"container\">";
 	$data = "";
-	$data .= '<div class="card my-2"><h4 class="card-header text-center"> Service status</h4><div class="card-body pb-0">';
+	$data = $data . '
+	<div class="card my-2">
+	  <h4 class="card-header text-center">
+	    Service status
+	  </h4>
+	<div class="card-body pb-0">
+	';
 
 	$timeout = "1";
 
