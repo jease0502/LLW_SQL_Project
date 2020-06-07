@@ -18,6 +18,7 @@
 
 <?php
 	session_start();
+	require_once("conect.php");
     try
     {
         $db = new PDO('mysql:host=localhost;dbname=class_database',$connect_un,$connect_pw);

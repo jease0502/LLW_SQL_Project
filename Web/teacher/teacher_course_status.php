@@ -18,6 +18,7 @@
 
 <?php
 	session_start();
+	require_once("conect.php");
     try
     {
         $db = new PDO('mysql:host=localhost;dbname=class_database',$connect_un,$connect_pw);
@@ -33,12 +34,12 @@
 						history.go(-1);
 					</script>
 				_END;
-			}
-        }
+		}
         else
         {
         	$db = new PDO('mysql:host=localhost;dbname=class_database',$connect_un,$connect_pw);
         	$sql_q = "SELECT class_detail.Class,class_detail.Name,class_detail.Code,class_detail.College,class_detail.Totalnum,class_detail.Nownum , teacher.Teacher_id ,teacher.Name FROM class_detail INNER JOIN teacher ON teacher.Name = class_detail.Teacher_Name and teacher.Teacher_id = '$T_id'";
+        	//$sql_q = "SELECT class_detail.Class,class_detail.Name,class_detail.Code,class_detail.College,class_detail.Totalnum,class_detail.Nownum , teacher.Teacher_id ,teacher.Name FROM class_detail INNER JOIN teacher ON teacher.Name = class_detail.Teacher_Name and teacher.Teacher_id = 'T01'";
         	$query = $db->query($sql_q);
             $datalist = $query->fetchALL();
             foreach ($datalist as $datalist)
@@ -48,7 +49,8 @@
             	$Code = $datalist[2];
             	$Totalnum = $datalist[3];
             	$Nownum = $datalist[4];
-            	$Name = $datalist[5];
+            	$TName = $datalist[5];
+            	echo $Class . " " . $Name . " " .$Code . " " .$Totalnum . " " .$Nownum . " " .$TName . "<br>";
             }
 
 
