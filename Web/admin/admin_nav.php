@@ -1,7 +1,7 @@
 <?php
 function nav_in()
 {
-	print'
+	print <<<END
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
@@ -31,6 +31,6 @@ function nav_in()
 				</ul>
 			</div>
 		</nav>
-'
+	END;
 }
 ?>
