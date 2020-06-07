@@ -7,12 +7,12 @@
 			<meta charset="utf-8">
 			<title>登入帳戶</title>
 			<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist\css\bootstrap.min.css">
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>     
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 			<script src="
 			bootstrap-3.3.7-dist\js/bootstrap.min.js"></script>
 			<style type="text/css">
 				body{
-					background-color: #eaf3da; 
+					background-color: #eaf3da;
 				}
 			.inputcss {
 				text-transform:uppercase;
@@ -23,7 +23,7 @@
 				line-height: 1.2em;
 				border-radius:10px
 				font-style: italic;
-				font-size:150%; 
+				font-size:150%;
 			}
 
 			</style>
@@ -39,7 +39,7 @@
 				<p> passward <br><input class ="inputcss" type="password" name="password"></p>
 				<input type="submit" name="value">
 			</form>
-		</div>	
+		</div>
 	</body>
 </html>
 
