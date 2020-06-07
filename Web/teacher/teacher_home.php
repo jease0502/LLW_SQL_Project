@@ -58,11 +58,11 @@
 </div>
 <table>
 	<tr>
-		<td><input type="button" class="button" value="課程編輯" onclick="location.href='teacher_course.php'"></td>
+		<td><input type="button" class="button" value="課程編輯" onclick="location.href='teacher_course.php'">
 	<tr>
-		<td><input type="button" class="button" value="課程選課狀態" onclick="location.href='teacher_course_status.php'"></td>
+		<td><input type="button" class="button" value="課程選課狀態" onclick="location.href='teacher_course_status.php'">
 	<tr>
-		<td><input type="button" class="button" value="教師資料編輯" onclick="location.href='teacher_contact.php'"></td>
+		<td><input type="button" class="button" value="教師資料編輯" onclick="location.href='teacher_contact.php'">
 	<tr>
 </table>
 </html>
