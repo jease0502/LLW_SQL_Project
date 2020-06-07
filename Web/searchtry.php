@@ -1,5 +1,5 @@
 <?php
-	session_start();
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,18 +51,18 @@
         }
     </style>
     <?php
-	    include "func.php";
-	    nav_judge();
+        include "func.php";
+        nav_judge();
     ?>
     <div style="text-align:center" >
-			<form action="searchresult.php" method="post" class="fromcss">
-					<p><font size="6">課程代號查詢<br> <input class="inputcss" type="text" name="search_class"></font></p>
-					<input type="submit" name="value">
-			</form>
-	</div>
+            <form action="searchresult.php" method="post" class="fromcss">
+                    <p>課程代號查詢<br> <input class="inputcss" type="text" name="search_class"></p>
+                    <input type="submit" name="value">
+            </form>
+    </div>
     <div id="cccc" style="text-align:center">
     <form name="myForm">
-        <div border="1px" style="float:left;width: 50%;height: 50%;font-size:200%">
+        <div border="1px" style="float:left;width: 50%;height: 50%;">
             <p>系別：</p>
             <select id="department" onchange="renew(this.selectedIndex);">
                 <option value="企業管理學系">企業管理系</option>
@@ -71,7 +71,7 @@
             </select>
         </div>
         <div border="1px" style="float:right;width: 50%;height: 50%;">
-            <p><font size="6">班級：</font></p>
+            <p>班級：</p>
             <select id="member">
                 <option value="">請由左方選取系別</option>
             </select>
