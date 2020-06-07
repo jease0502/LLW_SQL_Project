@@ -26,12 +26,13 @@
    foreach($row as $key){
     $sql_add_class ="
     BEGIN;
-    INSERT INTO class(Code,Person_id) VALUES (('$key[Code]','$Student_id');
-    UPDATE class_detail SET Nownum = Nownum + 1 WHERE Code = '$key' ;
+    INSERT INTO class(Code,Person_id) VALUES ('$key[Code]','$Student_id');
+    UPDATE class_detail SET Nownum = Nownum + 1 WHERE Code = '$key[Code]' ;
     UPDATE student SET Credit = Credit + $key[Credit] WHERE Student_id = '$Student_id';
     COMMIT;" ;
     $add = $db->query($sql_add_class);
    }
+   //echo $sql_add_class;
    echo "<script>alert('填寫成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
   } else{
    print"<script>alert(\"填寫錯誤\");</script>";
