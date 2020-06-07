@@ -31,6 +31,6 @@ function nav_in()
 				</ul>
 			</div>
 		</nav>
-	END;
+END;
 }
 ?>
